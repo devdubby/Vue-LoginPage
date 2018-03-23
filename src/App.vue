@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <span>ToDo list
+      <span>ToDo list web
         <img src="./assets/logo.png" alt="Vue.js PWA" height="45px" width="45px">
         <a class="login" href="https://vuejs.org" target="_blank" rel="noopener">login</a>
       </span>
