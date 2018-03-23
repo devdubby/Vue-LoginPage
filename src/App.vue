@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <header>
-      <span>ToDo list web
+   
+      <header>
         <img src="./assets/logo.png" alt="Vue.js PWA" height="45px" width="45px">
-        <a class="login" href="https://vuejs.org" target="_blank" rel="noopener">login</a>
-      </span>
-    </header>
-    
+        <span id="title">
+          ToDo list web
+        </span>
+        <span id="menu">
+          <a href="https://vuejs.org" target="_blank" rel="noopener">login</a>
+        </span>
+      </header>
     <main>
-      
       <router-view></router-view>
     </main>
   </div>
@@ -40,19 +42,25 @@ main {
 header {
   margin: 0;
   height: 56px;
-  padding: 0 16px 0 24px;
+  padding: 0 40px 0 24px;
   background-color: rgb(0, 204, 255);
   color: #ffffff;
 }
 
-header span {
-  display: inline;
-  position: relative;
+#title {
   font-size: 20px;
-  line-height: 1;
   letter-spacing: .02em;
   font-weight: 500;
-  box-sizing: border-box;
-  
+  padding-top: px;
+}
+#menu {
+  font-size: 20px;
+  letter-spacing: .02em;
+  font-weight: 300;
+  float: right;
+  padding: 15px 0 15px 0;
+}
+img {
+  padding-top: 5px;
 }
 </style>

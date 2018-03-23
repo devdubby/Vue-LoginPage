@@ -1,7 +1,7 @@
 <template>
-  <div class="hello">
+  <div class="intro">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h2>이 웹 페이지는 ToDo list의 효율적인 생성 및 관리를 도와주는 사이트 입니다.</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
@@ -24,7 +24,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js PWA'
+      msg: 'ToDo list 웹 프로젝트 입니다.'
     }
   }
 }
@@ -32,6 +32,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+.intro {
+  float: right;
+}
 h1, h2 {
   font-weight: normal;
 }
