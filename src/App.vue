@@ -10,7 +10,6 @@
           <a href="https://vuejs.org" target="_blank" rel="noopener">login</a>
         </span>
       </header>
-      
     <main>
       <router-view></router-view>
       
