@@ -1,68 +1,72 @@
 <template>
-  <div id="app">
-   
-      <header>
-        <img src="./assets/logo.png" alt="Vue.js PWA" height="45px" width="45px">
-        <span id="title">
-          ToDo list web
-        </span>
-        <span id="menu">
-          <a href="https://vuejs.org" target="_blank" rel="noopener">login</a>
-        </span>
-      </header>
-    <main>
-      <router-view></router-view>
-      
-    </main>
-  </div>
-  
+  <v-app id="inspire">
+    <v-navigation-drawer
+      fixed
+      v-model="drawer"
+      app
+    >
+      <v-list dense>
+        <v-list-tile @click="">
+          <v-list-tile-action>
+            <v-icon>home</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Home</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile @click="">
+          <v-list-tile-action>
+            <v-icon>contact_mail</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Contact</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar color="indigo accent-2" dark fixed app>
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title>ToDo list web project</v-toolbar-title>
+      <div class="text-xs-center">
+        <v-btn round color="primary" dark>Rounded Button</v-btn>
+      </div>
+    </v-toolbar>
+    <v-content>
+      <v-container fluid fill-height>
+        <v-layout
+          justify-center
+          align-center
+        >
+          <v-flex text-xs-center>
+            <v-tooltip left>
+              <v-btn icon large :href="source" target="_blank" slot="activator">
+                <v-icon large>code</v-icon>
+              </v-btn>
+              <span>Source</span>
+            </v-tooltip>
+            <v-tooltip right>
+              <v-btn icon large href="https://codepen.io/johnjleider/pen/rJdVMq" target="_blank" slot="activator">
+                <v-icon large>mdi-codepen</v-icon>
+              </v-btn>
+              <span>Codepen</span>
+            </v-tooltip>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-content>
+    <v-footer color="indigo accent-2" app>
+      <span class="white--text">&copy; 2018</span>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  export default {
+    data: () => ({
+      drawer: null
+    }),
+    props: {
+      source: String
+    }
+  }
 </script>
-
-<style>
-body {
-  margin: 0;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-main {
-  text-align: center;
-  margin-top: 40px;
-}
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 40px 0 24px;
-  background-color: rgb(0, 204, 255);
-  color: #ffffff;
-}
-
-#title {
-  font-size: 20px;
-  letter-spacing: .02em;
-  font-weight: 500;
-  padding-top: px;
-}
-#menu {
-  font-size: 20px;
-  letter-spacing: .02em;
-  font-weight: 300;
-  float: right;
-  padding: 15px 0 15px 0;
-}
-img {
-  padding-top: 5px;
-}
-</style>
