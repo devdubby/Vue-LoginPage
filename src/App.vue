@@ -1,16 +1,19 @@
 <template>
   <div id="app">
    <v-app light>
-    <v-toolbar color="light-blue">
-    <v-toolbar-side-icon></v-toolbar-side-icon>
-    <v-toolbar-title>Jun's Todo Web Project</v-toolbar-title>
+    <v-toolbar class="blue lighten-2">
+    <v-toolbar-title>
+      <router-link to="/" tag="span" style="cursor: pointer">
+        <span class="group pa-2">
+         <v-icon large>home</v-icon>
+        </span>Todo Web Application
+      </router-link>
+    </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn flat>Link One</v-btn>
-      <v-btn flat>Link Two</v-btn>
-      <v-btn flat>Link Three</v-btn>
+      <v-btn flat>Login</v-btn>
     </v-toolbar-items>
-  </v-toolbar>
+   </v-toolbar>
     <v-content>
       <section>
         <v-parallax src="../static/img/parallax/hero.jpeg" height="600">
@@ -20,16 +23,16 @@
             justify-center
             class="white--text"
           >
-            <img src="../static/img/parallax/ssom.jpg" alt="Vuetify.js" height="200">
+            <img src="../static/img/parallax/vuetify.png" alt="Vuetify.js" height="200">
             <h1 class="white--text mb-2 display-1 text-xs-center">VueJS Project</h1>
             <div class="subheading mb-3 text-xs-center">ToDo Web Application</div>
             <v-btn
               class="blue lighten-2 mt-5"
               dark
               large
-              href="/pre-made-themes"
+              to="/login"
             >
-              Get Started
+              시작하기
             </v-btn>
           </v-layout>
         </v-parallax>
@@ -115,7 +118,7 @@
               large
               href="/pre-made-themes"
             >
-              Get Started
+              시작하기
             </v-btn>
           </v-layout>
         </v-parallax>
