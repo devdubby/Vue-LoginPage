@@ -1,6 +1,7 @@
 # vuejs_study
 
 > A Vue.js project
+> 포트폴리오를 위한 Todo 웹 애플리케이션 사이트입니다.
 
 ## Build Setup
 
