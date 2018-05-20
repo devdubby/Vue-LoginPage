@@ -6,7 +6,7 @@
           <router-link to="/" tag="span" style="cursor: pointer">
             <span class="group pa-2">
               <v-icon large>home</v-icon>
-            </span>Todo Web Application
+            </span>Jun's Web Application
           </router-link>
         </v-toolbar-title>
         <v-spacer></v-spacer>
@@ -21,6 +21,7 @@
     </v-app>
   </div>
 </template>
+
 
 
 
